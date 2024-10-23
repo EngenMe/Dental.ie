@@ -2,7 +2,6 @@ import {
   AlertCircle,
   AlignCenter,
   Anchor,
-  Book,
   Calendar,
   CheckSquare,
   Clipboard,
@@ -17,10 +16,7 @@ import {
   PhoneMissed,
   Smile,
   Star,
-  Sunset,
-  Trees,
   Users,
-  Zap,
 } from 'lucide-react';
 
 import {
@@ -49,30 +45,6 @@ import {
 } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { TbDental } from 'react-icons/tb';
-
-const subMenuItemsOne = [
-  {
-    title: 'Blog',
-    description: 'The latest industry news, updates, and info',
-    icon: <Book className="size-5 shrink-0" />,
-  },
-  {
-    title: 'Compnay',
-    description: 'Our mission is to innovate and empower the world',
-    icon: <Trees className="size-5 shrink-0" />,
-  },
-  {
-    title: 'Careers',
-    description: 'Browse job listing and discover our workspace',
-    icon: <Sunset className="size-5 shrink-0" />,
-  },
-  {
-    title: 'Support',
-    description:
-      'Get in touch with our support team or visit our community forums',
-    icon: <Zap className="size-5 shrink-0" />,
-  },
-];
 
 const subMenuItemsAboutUs = [
   {
@@ -187,42 +159,15 @@ const subMenuItemsContactUs = [
   },
 ];
 
-const subMenuItemsTwo = [
-  {
-    title: 'Help Center',
-    description: 'Get all the answers you need right here',
-    icon: <Zap className="size-5 shrink-0" />,
-  },
-  {
-    title: 'Contact Us',
-    description: 'We are here to help you with any questions you have',
-    icon: <Sunset className="size-5 shrink-0" />,
-  },
-  {
-    title: 'Status',
-    description: 'Check the current status of our services and APIs',
-    icon: <Trees className="size-5 shrink-0" />,
-  },
-  {
-    title: 'Terms of Service',
-    description: 'Our terms and conditions for using our services',
-    icon: <Book className="size-5 shrink-0" />,
-  },
-];
-
 const Navbar = () => {
   return (
     <section className="p-5">
-      <div className="container">
-        <nav className="hidden justify-between lg:flex">
-          <div className="flex items-center gap-6">
+      <div>
+        <nav className="hidden lg:flex">
+          <div className="flex items-center justify-between w-full gap-6">
             <div className="flex items-center gap-2">
-              <img
-                src="https://www.shadcnblocks.com/images/block/block-1.svg"
-                className="w-8"
-                alt="logo"
-              />
-              <span className="text-xl font-bold">Shadcn Blocks</span>
+              <TbDental className="text-4xl" />
+              <span className="text-xl font-bold">Dental.ie</span>
             </div>
             <div className="flex items-center">
               <a
@@ -239,20 +184,21 @@ const Navbar = () => {
               </a>
               <NavigationMenu>
                 <NavigationMenuList>
-                  <NavigationMenuItem className="text-muted-foreground">
-                    <NavigationMenuTrigger>
-                      <span>Products</span>
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="w-80 p-3">
-                        <NavigationMenuLink>
-                          {subMenuItemsOne.map((item, idx) => (
+                  <NavigationMenu>
+                    <NavigationMenuItem className="text-muted-foreground">
+                      <NavigationMenuTrigger>
+                        <span>About Us</span>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="w-80 p-3">
+                          {subMenuItemsAboutUs.map((item, idx) => (
                             <li key={idx}>
-                              <a
+                              <NavigationMenuLink
+                                href="#"
+                                key={idx}
                                 className={cn(
                                   'flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
                                 )}
-                                href="#"
                               >
                                 {item.icon}
                                 <div>
@@ -263,25 +209,28 @@ const Navbar = () => {
                                     {item.description}
                                   </p>
                                 </div>
-                              </a>
+                              </NavigationMenuLink>
                             </li>
                           ))}
-                        </NavigationMenuLink>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem className="text-muted-foreground">
-                    <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="w-80 p-3">
-                        <NavigationMenuLink>
-                          {subMenuItemsTwo.map((item, idx) => (
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenu>
+                  <NavigationMenu>
+                    <NavigationMenuItem className="text-muted-foreground">
+                      <NavigationMenuTrigger>
+                        <span>Services</span>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="w-80 p-3">
+                          {subMenuItemsServices.map((item, idx) => (
                             <li key={idx}>
-                              <a
+                              <NavigationMenuLink
+                                href="#"
+                                key={idx}
                                 className={cn(
                                   'flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
                                 )}
-                                href="#"
                               >
                                 {item.icon}
                                 <div>
@@ -292,45 +241,116 @@ const Navbar = () => {
                                     {item.description}
                                   </p>
                                 </div>
-                              </a>
+                              </NavigationMenuLink>
                             </li>
                           ))}
-                        </NavigationMenuLink>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenu>
+                  <NavigationMenu>
+                    <NavigationMenuItem className="text-muted-foreground">
+                      <NavigationMenuTrigger>
+                        <span>Appointments</span>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="w-80 p-3">
+                          {subMenuItemsAppointments.map((item, idx) => (
+                            <li key={idx}>
+                              <NavigationMenuLink
+                                href="#"
+                                key={idx}
+                                className={cn(
+                                  'flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
+                                )}
+                              >
+                                {item.icon}
+                                <div>
+                                  <div className="text-sm font-semibold">
+                                    {item.title}
+                                  </div>
+                                  <p className="text-sm leading-snug text-muted-foreground">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenu>
+                  <NavigationMenu>
+                    <NavigationMenuItem className="text-muted-foreground">
+                      <NavigationMenuTrigger>
+                        <span>Patient Information</span>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="w-80 p-3">
+                          {subMenuItemsPatientInformation.map((item, idx) => (
+                            <li key={idx}>
+                              <NavigationMenuLink
+                                href="#"
+                                key={idx}
+                                className={cn(
+                                  'flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
+                                )}
+                              >
+                                {item.icon}
+                                <div>
+                                  <div className="text-sm font-semibold">
+                                    {item.title}
+                                  </div>
+                                  <p className="text-sm leading-snug text-muted-foreground">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenu>
+                  <NavigationMenu>
+                    <NavigationMenuItem className="text-muted-foreground">
+                      <NavigationMenuTrigger>
+                        <span>Contact Us</span>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="w-80 p-3">
+                          {subMenuItemsContactUs.map((item, idx) => (
+                            <li key={idx}>
+                              <NavigationMenuLink
+                                href="#"
+                                key={idx}
+                                className={cn(
+                                  'flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
+                                )}
+                              >
+                                {item.icon}
+                                <div>
+                                  <div className="text-sm font-semibold">
+                                    {item.title}
+                                  </div>
+                                  <p className="text-sm leading-snug text-muted-foreground">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenu>
                 </NavigationMenuList>
               </NavigationMenu>
-
-              <a
-                className={cn(
-                  'text-muted-foreground',
-                  navigationMenuTriggerStyle,
-                  buttonVariants({
-                    variant: 'ghost',
-                  })
-                )}
-                href="#"
-              >
-                Pricing
-              </a>
-              <a
-                className={cn(
-                  'text-muted-foreground',
-                  navigationMenuTriggerStyle,
-                  buttonVariants({
-                    variant: 'ghost',
-                  })
-                )}
-                href="#"
-              >
-                Blog
-              </a>
             </div>
-          </div>
-          <div className="flex gap-2">
-            <Button variant={'outline'}>Log in</Button>
-            <Button>Sign up</Button>
+            <Button className="h-14">
+              Manage <br className="xl:hidden" />
+              Appointment
+            </Button>
           </div>
         </nav>
         <div className="block lg:hidden">
