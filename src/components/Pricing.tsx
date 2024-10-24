@@ -26,10 +26,11 @@ const Pricing = () => {
           <Switch
             onCheckedChange={() => setIsFirstTime(!isFirstTime)}
             checked={isFirstTime}
+            className="data-[state=unchecked]:bg-secondary-foreground"
           />
           Refer Customer Discount
         </div>
-        <div className="flex flex-col items-stretch gap-6 lg:flex-row">
+        <div className="flex flex-col items-stretch gap-6 lg:gap-20 lg:flex-row">
           <Card className="flex w-80 flex-col justify-between text-center">
             <CardHeader>
               <CardTitle>
