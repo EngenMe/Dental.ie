@@ -6,60 +6,69 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import testimonial1 from '@/assets/testimonial1.webp';
+import testimonial2 from '@/assets/testimonial2.webp';
+import testimonial3 from '@/assets/testimonial3.webp';
+import testimonial4 from '@/assets/testimonial4.webp';
+import testimonial5 from '@/assets/testimonial5.webp';
+import testimonial6 from '@/assets/testimonial6.webp';
 
 const testimonials = [
   {
-    name: 'John Doe',
-    role: 'CEO & Founder',
-    avatar: '/images/block/avatar-1.webp',
+    name: 'Emily Thompson',
+    role: 'Teacher',
+    avatar: testimonial1,
     content:
-      'Lorem ipsum dolor sit, amet Odio, incidunt.  id ut omnis repellat. Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis.',
+      'Dental.ie made my visit stress-free. The staff was so friendly and the dentist took great care of my teeth. I can’t recommend them enough!',
   },
   {
-    name: 'Jane Doe',
-    role: 'CTO',
-    avatar: '/images/block/avatar-2.webp',
+    name: 'Michael O’Connell',
+    role: 'Business Owner',
+    avatar: testimonial2,
     content:
-      'Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat.',
+      'I was nervous about my treatment, but the team at Dental.ie was amazing. They explained everything and made sure I was comfortable throughout the process.',
   },
   {
-    name: 'John Smith',
-    role: 'COO',
-    avatar: '/images/block/avatar-3.webp',
+    name: 'Sarah Byrne',
+    role: 'Accountant',
+    avatar: testimonial3,
     content:
-      'Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. Lorem ipsum dolor sit.',
+      'Fantastic experience! The clinic is clean, modern, and well-equipped. I received a thorough check-up and great advice on dental care.',
   },
   {
-    name: 'Jane Smith',
-    role: 'Tech Lead',
-    avatar: '/images/block/avatar-4.webp',
+    name: 'David Murphy',
+    role: 'Engineer',
+    avatar: testimonial4,
     content:
-      'Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. incidunt. Ratione, ullam? Iusto id ut omnis repellat ratione.',
+      'From booking to the actual appointment, everything was smooth. The staff is professional and the clinic offers top-notch services. Highly recommend!',
   },
   {
-    name: 'Richard Doe',
-    role: 'Designer',
-    avatar: '/images/block/avatar-5.webp',
+    name: 'Laura Gallagher',
+    role: 'Graphic Designer',
+    avatar: testimonial5,
     content:
-      'Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat.',
+      'I’ve been to many dentists, but Dental.ie stands out for its friendly environment and excellent care. My family and I are all regulars now!',
   },
   {
-    name: 'Gordon Doe',
-    role: 'Developer',
-    avatar: '/images/block/avatar-6.webp',
+    name: 'Mark Ryan',
+    role: 'Chef',
+    avatar: testimonial6,
     content:
-      'Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat.',
+      'I had a great experience at Dental.ie. The clinic has advanced equipment, and the dentist made sure I felt at ease. My teeth have never felt better!',
   },
 ];
 
-const Testimonial6 = () => {
+const Testimonial = () => {
   return (
-    <section className="py-32">
-      <div className="container">
+    <section className="py-20 px-5">
+      <div className="">
         <Carousel className="w-full">
-          <div className="mb-8 flex justify-between px-1 lg:mb-12">
-            <h2 className="text-2xl font-semibold lg:text-5xl">
+          <div className="mb-8 flex justify-between md:px-10 px-2 lg:mb-12">
+            <h2 className="text-2xl font-semibold lg:text-5xl hidden md:block">
               Why Clients Love Us
+            </h2>
+            <h2 className="text-2xl font-semibold lg:text-5xl md:hidden">
+              Why Clients <br /> Love Us
             </h2>
             <div className="flex items-center space-x-2">
               <CarouselPrevious className="static translate-y-0" />
@@ -102,4 +111,4 @@ const Testimonial6 = () => {
   );
 };
 
-export default Testimonial6;
+export default Testimonial;
