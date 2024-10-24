@@ -16,9 +16,9 @@ const Pricing = () => {
   const [isFirstTime, setIsFirstTime] = useState(false);
   return (
     <section className="py-32">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-6">
         <h2 className="text-pretty text-4xl font-bold lg:text-6xl">Services</h2>
-        <p className="text-muted-foreground lg:text-xl">
+        <p className="text-muted-foreground px-2 text-center lg:text-xl">
           Explore Our Comprehensive Dental Services for a Healthier, Brighter
           Smile
         </p>
@@ -30,7 +30,7 @@ const Pricing = () => {
           Refer Customer Discount
         </div>
         <div className="flex flex-col items-stretch gap-6 lg:flex-row">
-          <Card className="flex w-80 flex-col justify-between text-left">
+          <Card className="flex w-80 flex-col justify-between text-center">
             <CardHeader>
               <CardTitle>
                 <p>Teeth Whitening</p>
@@ -73,7 +73,7 @@ const Pricing = () => {
               </Button>
             </CardFooter>
           </Card>
-          <Card className="flex w-80 flex-col justify-between text-left">
+          <Card className="flex w-80 flex-col justify-between text-center">
             <CardHeader>
               <CardTitle>
                 <p>Dental Implants</p>
@@ -116,7 +116,7 @@ const Pricing = () => {
               </Button>
             </CardFooter>
           </Card>
-          <Card className="flex w-80 flex-col justify-between text-left">
+          <Card className="flex w-80 flex-col justify-between text-center">
             <CardHeader>
               <CardTitle>
                 <p>Orthodontic Braces</p>
