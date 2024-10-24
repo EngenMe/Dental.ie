@@ -169,7 +169,7 @@ const Navbar = () => {
               <TbDental className="text-4xl" />
               <span className="text-xl font-bold">Dental.ie</span>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center gap-5">
               <a
                 className={cn(
                   'text-muted-foreground',
@@ -375,7 +375,7 @@ const Navbar = () => {
                     </div>
                   </SheetTitle>
                 </SheetHeader>
-                <div className="my-8 flex flex-col gap-4">
+                <div className="my-8 flex flex-col gap-6">
                   <a href="#" className="font-semibold">
                     Home
                   </a>
