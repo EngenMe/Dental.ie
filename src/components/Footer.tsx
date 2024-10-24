@@ -56,13 +56,13 @@ const Footer = () => {
             <div className="flex gap-2">
               <a
                 href="#"
-                className="inline-flex items-center justify-center rounded-lg bg-primary p-2.5"
+                className="inline-flex items-center justify-center rounded-lg bg-primary hover:bg-primary/90 p-2.5"
               >
                 <FaWhatsapp className="size-7 text-background" />
               </a>
               <a
                 href="#"
-                className="inline-flex items-center justify-center rounded-lg bg-primary p-2.5"
+                className="inline-flex items-center justify-center rounded-lg bg-primary hover:bg-primary/90 p-2.5"
               >
                 <FaGooglePlay className="size-7 text-background" />
               </a>
